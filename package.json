@@ -1,0 +1,17 @@
+{
+  "name": "web-serwer-require",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mk",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "express": "^4.19.2",
+    "handlebars": "^4.7.8",
+    "hbs": "^4.2.0"
+  }
+}
