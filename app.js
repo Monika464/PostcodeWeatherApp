@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 //const Handlebars = require("handlebars");
 const hbs = require("hbs");
-const geocode = require("./utils/geocode"); // Zaimportowanie funkcji geocode
+const geocode = require("./utils/geocode");
 const forecast = require("./utils/forecast");
 const app = express();
 const port = process.env.PORT || 3000;
@@ -44,14 +44,24 @@ app.get("/help", (req, res) => {
 
 app.get("/weather", (req, res) => {
   const address = req.query.address;
-
   if (!address) {
     return res.send({ error: "You must provide an address!" });
   }
 
-  res.send({ address });
+  //geocode(address);
+  // Wywołanie funkcji geocode, która zwraca dane lokalizacji i pogodowe
+  geocode(address, (data) => {
+    if (!data) {
+      return res.send({ error: "Unable to find location." });
+    }
+
+    res.send({
+      location: data.location,
+      forecast: data.weather,
+      temperature: data.temperature,
+    });
+  });
 });
-//});
 
 app.get("/help/*", (req, res) => {
   res.render("404", {

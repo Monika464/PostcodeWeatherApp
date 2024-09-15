@@ -1,32 +1,47 @@
-console.log("hej");
-
 const axios = require("axios");
 
 // Ustal URL API pogodowego, np. z weatherapi.com
 
-const forecast = (latitude, longitude, callback) => {
-  const url =
-    "https://api.weatherapi.com/v1/current.json?key=cacc28221be14c61981131839242308&q=" +
-    latitude +
-    "," +
-    longitude;
+// const forecast = (latitude, longitude) => {
+//   const url =
+//     "https://api.weatherapi.com/v1/current.json?key=cacc28221be14c61981131839242308&q=" +
+//     latitude +
+//     "," +
+//     longitude;
 
-  // Wysyłanie zapytania GET
-  axios
-    .get(url)
-    .then((response) => {
-      // Wypisanie danych pogodowych w konsoli
-      console.log(response.data);
-      callback(response.data);
-    })
-    .catch((error) => {
-      console.error("Wystąpił błąd:", error);
-    });
-};
+//   // Wysyłanie zapytania GET
+//   axios
+//     .get(url)
+//     .then((response) => {
+//       // Wypisanie danych pogodowych w konsoli
+//       console.log("rere", response.data.current.condition.text);
+//       //callback(response.data);
+//     })
+//     .catch((error) => {
+//       console.error("Wystąpił błąd:", error);
+//     });
+// };
 
 //forecast(52.23, 21.01);
+// Funkcja forecast
+// const forecast = (latitude, longitude, callback) => {
+//   const url =
+//     "https://api.weatherapi.com/v1/current.json?key=cacc28221be14c61981131839242308&q=" +
+//     latitude +
+//     "," +
+//     longitude;
 
-module.exports = forecast;
+//   axios
+//     .get(url)
+//     .then((response) => {
+//       callback(response.data); // Przekazanie danych pogodowych przez callback
+//     })
+//     .catch((error) => {
+//       console.error("Wystąpił błąd:", error);
+//     });
+// };
+
+// module.exports = forecast;
 
 // const request = require('request')
 
