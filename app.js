@@ -54,7 +54,7 @@ app.get("/weather", (req, res) => {
     if (!data) {
       return res.send({ error: "Unable to find location." });
     }
-
+    console.log("tu data", data);
     res.send({
       location: data.location,
       forecast: data.weather,

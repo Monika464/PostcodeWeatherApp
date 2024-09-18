@@ -5,10 +5,12 @@ const search = document.querySelector("input");
 const messageOne = document.querySelector("#message-1");
 const messageTwo = document.querySelector("#message-2");
 const messageThree = document.querySelector("#message-3");
+const messageFour = document.querySelector("#message-4");
 
 messageOne.textContent = "";
 messageTwo.textContent = "";
 messageThree.textContent = "";
+messageFour.textContent = "";
 
 weatherForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -70,7 +72,7 @@ weatherForm.addEventListener("submit", (e) => {
         messageTwo.textContent = `Weather: ${data.forecast}, Temperature: ${data.temperature}°C`;
         messageThree.textContent = `Location: ${data.location};`;
 
-        console.log("Adres:", data.location);
+        console.log("moon", data.forecast);
         console.log("hej");
         messageOne.textContent = "";
       }
