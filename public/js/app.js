@@ -73,7 +73,7 @@ weatherForm.addEventListener("submit", (e) => {
         messageThree.textContent = `Location: ${data.location};`;
 
         console.log("moon", data.forecast);
-        console.log("hej");
+        //console.log("hej");
         messageOne.textContent = "";
       }
     });

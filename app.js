@@ -23,14 +23,14 @@ app.use(express.static(publicDirectoryPath));
 app.get("", (req, res) => {
   res.render("index", {
     title: "Weather",
-    name: "Andrew Mead",
+    name: "Monika",
   });
 });
 
 app.get("/about", (req, res) => {
   res.render("about", {
     title: "About Me",
-    name: "Andrew Mead",
+    name: "Monika",
   });
 });
 
@@ -38,7 +38,7 @@ app.get("/help", (req, res) => {
   res.render("help", {
     helpText: "This is some helpful text.",
     title: "Help",
-    name: "Andrew Mead",
+    name: "Monika",
   });
 });
 
@@ -54,7 +54,7 @@ app.get("/weather", (req, res) => {
     if (!data) {
       return res.send({ error: "Unable to find location." });
     }
-    console.log("tu data", data);
+
     res.send({
       location: data.location,
       forecast: data.weather,
@@ -67,7 +67,7 @@ app.get("/help/*", (req, res) => {
   res.render("404", {
     errorMessage: "This is some not helpful text.",
     title: "404",
-    name: "Andrew Mead",
+    name: "Monika",
   });
 });
 
@@ -75,7 +75,7 @@ app.get("*", (req, res) => {
   res.render("404", {
     errorMessage: "This is some not too much helpful text.",
     title: "404",
-    name: "Andrew Mead",
+    name: "Monika",
   });
 });
 
