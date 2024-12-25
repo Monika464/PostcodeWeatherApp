@@ -72,7 +72,7 @@ weatherForm.addEventListener("submit", (e) => {
         messageTwo.textContent = `Weather: ${data.forecast}, Temperature: ${data.temperature}°C`;
         messageThree.textContent = `Location: ${data.location};`;
 
-        console.log("moon", data.forecast);
+        //console.log("moon", data.forecast);
         //console.log("hej");
         messageOne.textContent = "";
       }
